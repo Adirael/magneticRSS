@@ -1,11 +1,15 @@
-magneticRSS
+magneticRSS 
 ===========
 
-magneticRSS is a small *PHP* application written using the Fat Free Framework. 
+magneticRSS is a small *PHP* application written using the *Fat Free Framework*. 
 
 It stores magnet links and distributes them to compatible clients using RSS.
 
 -----------------------
+
+### Warning - Unstable Project
+
+This project is in an **early development** stage, changes may be done wildly and expect things to break. Once the project advances a bit I'll start using feature branches and organizing everything a bit.
 
 ### Create a userToken and userPassword
 

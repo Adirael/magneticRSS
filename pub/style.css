@@ -1,0 +1,26 @@
+div.jumbotron {
+    margin-top: 30px;
+}
+
+.nav-pills>li {
+    margin-right: 10px;
+}
+
+.nav-pills>li:last-child {
+    margin-right: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+#register-form .col-lg-6 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#register-form .forgot-password-link {
+    padding: 10px 15px;
+    display: block;
+    text-align: right;
+}
