@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+
+    <channel>
+        <title>magneticRSS</title>
+        <link>http://rss.ebenum.es</link>
+        <description>Magnet link distribution RSS</description>
+
+        <repeat group="{{ @items }}" value="{{ @item }}">
+            <item>
+                <link><![CDATA[{{ trim(@item.magnetLink) }}]]></link>
+            </item>
+        </repeat>
+
+    </channel>
+
+</rss>
