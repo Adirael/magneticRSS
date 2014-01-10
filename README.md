@@ -27,6 +27,10 @@ All RSS feeds are publicy available, the URL is generated using the userToken, a
 
 -----------------------
 
+### How to
+
+![image](https://raw2.github.com/Adirael/magneticRSS/master/pub/images/screenshot.png)
+
 ### Future releases
 
 Future releases will include the next features:
