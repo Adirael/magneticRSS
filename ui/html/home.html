@@ -31,8 +31,23 @@
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+
+            <check if="{{ @currentUser }}">
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Log Out</a>
+                </li>
+            </check>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
         </ul>
         <h3 class="text-muted">magneticRSS</h3>
     </div>
@@ -51,15 +66,11 @@
 
     <div class="row marketing">
         <div class="col-lg-6">
-            <h4>Log In</h4>
-
-            <include href="html/login.html" />
+            <include if="{{ !@currentUser }}" href="html/login.html" />
         </div>
 
         <div class="col-lg-6">
-            <h4>Register</h4>
-
-            <include href="html/register.html" />
+            <include if="{{ !@currentUser }}" href="html/register.html" />
         </div>
     </div>
 

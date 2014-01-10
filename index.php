@@ -9,6 +9,9 @@ $f3->set('AUTOLOAD', 'app/default/');
 $f3->set('UI', 'ui/');
 $f3->set('db', $db = new DB\SQL('mysql:host='.$f3->get('mysql_host').';port='.$f3->get('mysql_port').';dbname='.$f3->get('mysql_db'), $f3->get('mysql_user'), $f3->get('mysql_password')));
 
+// Try to get an user
+$f3->set('currentUser', Magnetic::getUser($f3));
+
 // Front page
 $f3->route('GET /',
     function () {
@@ -27,5 +30,11 @@ $f3->route('GET /@userToken/rss', 'Magnetic::getRSS');
 
 // User Profile
 $f3->route('GET /@userToken/profile', 'Magnetic::getUserProfile');
+
+// User Login
+$f3->route('GET|POST /login', 'Magnetic::loginUser');
+
+// User Log Out
+$f3->route('GET /logout', 'Magnetic::destroyUser');
 
 $f3->run();

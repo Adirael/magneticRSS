@@ -1,16 +1,18 @@
-<form id="register-form">
+<h4>Log In</h4>
+
+<form id="register-form" action="/login" method="post">
     <div class="input-group input-group-sm">
         <span class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
+            <span class="glyphicon glyphicon-user"></span>
         </span>
-        <input type="text" class="form-control" placeholder="Username">
+        <input type="text" name="userToken" class="form-control" placeholder="Username">
     </div>
 
     <div class="input-group input-group-sm">
         <span class="input-group-addon">
              <span class="glyphicon glyphicon-eye-close"></span>
         </span>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" name="userPassword" class="form-control" placeholder="Password">
     </div>
 
     <div class="col-lg-6">
