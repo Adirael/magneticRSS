@@ -34,3 +34,10 @@ Future releases will include the next features:
 * Allow users to change their password
 * Save the user's email (optional) to allow password recovery
 * An amicable welcome page when pointing to /
+
+-----------------------
+
+### Library
+
+* [Twitter Bootstrap](http://getbootstrap.com/)
+* [Flatly Bootstrap theme from Bootswatch](http://bootswatch.com/flatly/)

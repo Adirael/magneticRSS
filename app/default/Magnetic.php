@@ -4,7 +4,10 @@ class Magnetic
 {
     static function addItem($f3)
     {
-        if (empty($f3->get('REQUEST.magnetLink'))) {
+        // phpStorm highlighting is broken, that's why I need to define the var instead of directly passing it
+        $magnetLink = $f3->get('REQUEST.magnetLink');
+
+        if (empty($magnetLink)) {
             echo 'You need to specify a magnetLink value.';
 
             return false;
@@ -60,7 +63,5 @@ class Magnetic
 
         $f3->set('items', $items);
         echo Template::instance()->render('rss.xml', 'application/xml');
-
-        return false;
     }
 }

@@ -4,17 +4,15 @@
 $f3 = require('lib/base.php');
 
 // Configuration
-$f3->set('DEBUG', 3);
+$f3->config('app/config.ini');
 $f3->set('AUTOLOAD', 'app/default/');
 $f3->set('UI', 'ui/');
-$f3->set('db', $db = new DB\SQL('mysql:host=localhost;port=3306;dbname=magneticRSS', 'root', 'root'));
-$f3->set('salt', 'Y4Nv4Or4motbdh0ixE8UV5cRkBfwGDSDruZjPKjtqH1V5j5IfAPJUETIWohJyqhZ17U1JB3brYN380O4cRWyOO5134NJ3aX2CtZPwJAJJGuBt8Ao0opywDKjBEfYTHi4dFOX7YwSbMztakThfeCrH4TXAElWYjRgXtQ7b35BP8BsnAsttGgfvZg15LQzEmVa1vWILs9Yhq4Rm8S06HSCUPhQJcTWGwKVclRIyuBsL8jGOdejaNB8ZZnRdKeSZGnpPwKq6MCZs1qiBmDYcEG9KtJkviZUFhHruvEbneIo07z1K4G2f8hJSF4jnT0T2kWheOsELqrEI8XF9zFTLncQ7BS1bNiuxkpPZMTi6Al9nF2Jnaqsl3nKTmtZRCVt55cHhIyOsepTd3qUHvMW3mYcImLyoXBsL8NndcOZeRcb1sEidnhIHHdh4AHv0JLdr4txbfndD5xjfVPBCDh2MfLtf8oRAltnVV1NFPNGOe0qrdPBmmC2ldAg1vagoKJZjfNjO5yVDCez');
-
+$f3->set('db', $db = new DB\SQL('mysql:host='.$f3->get('mysql_host').';port='.$f3->get('mysql_port').';dbname='.$f3->get('mysql_db'), $f3->get('mysql_user'), $f3->get('mysql_password')));
 
 // Front page
 $f3->route('GET /',
     function () {
-        echo 'Hello, world!';
+        echo Template::instance()->render('html/home.html');
     }
 );
 
