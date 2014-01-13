@@ -49,3 +49,4 @@ Future releases will include the next features:
 
 * [Twitter Bootstrap](http://getbootstrap.com/)
 * [Flatly Bootstrap theme from Bootswatch](http://bootswatch.com/flatly/)
+* [Fat Free Framework](http://fatfreeframework.com/)
