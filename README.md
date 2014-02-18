@@ -9,7 +9,7 @@ It stores magnet links and distributes them to compatible clients using RSS.
 
 ### Warning - Unstable Project
 
-This project is in an **early development** stage, changes may be done wildly and expect things to break. Once the project advances a bit I'll start using feature branches and organizing everything a bit.
+This project is in an **early development** stage, changes may be done wildly; expect things to break. Once the project advances a bit I'll start using feature branches and organizing everything a bit more.
 
 ### Create a userToken and userPassword
 
